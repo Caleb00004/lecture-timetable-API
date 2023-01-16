@@ -1,3 +1,4 @@
-﻿# CRUD-API
+﻿# Lecture timetable API
  
- ### A CRUD API built with express.js for a Book-management (crud)project
+ ### An API built with node and express.js for a school project.
+
