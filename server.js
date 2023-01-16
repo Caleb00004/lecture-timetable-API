@@ -3,7 +3,6 @@ const cors = require("cors");
 
 require("dotenv").config();
 
-// const { author } = require("./file");
 const bodyParser = require('body-parser');
 const app = express();
 //Here we are configuring express to use body-parser as    middle-ware.
@@ -67,17 +66,7 @@ const Data = {
   ]
 }
 
-// let Students = [
-
-// ]
-
-// let Levels = [
-
-// ]
-
 app.use(cors());
-// app.use("/audio", express.static("audio"));
-// app.use("/cover", express.static("cover"));
 
 const setStatus = (req, res, next) => {
   if (operationInProgress) {
@@ -113,25 +102,6 @@ app.post('/data', (req, res) => {
 
     return;
 });
-
-// app.delete('/books/:id', (req, res) => {
-//   console.log(req.params)
-//   books = books.filter((bookItem) => bookItem.id !== req.params.id);
-
-// //  res.end('book Deleted')
-//   res.send(res.statusMessage)
-// })
-
-// app.patch('/books/:id', (req, res) => {
-//   const bookItem = books.find((book) => book.id === req.params.id);
-    
-//   bookItem.title = req.body.title;
-//   bookItem.summary = req.body.summary;
-//   bookItem.price = req.body.price;
-
-// //  res.end('book Updated')
-//   res.send(res.statusMessage)
-// })
 
 
 app.listen(process.env.PORT || 4000, () => {
